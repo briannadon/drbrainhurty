@@ -11,8 +11,7 @@ intents.message_content = True
 load_dotenv()
 
 client = discord.Client(intents=intents)
-#TOKEN = os.getenv('DISCORD_TOKEN')
-TOKEN = 'MTA3MzI4MzMyMzE3MTk4MzQ0MQ.GxkS5g.85AxGXIyDxGIzSLUt9XbcWTFr5X31AMmfl98JE'
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 rx_path = os.path.dirname(os.path.realpath(__file__)) + "/prescriptions.txt"
 prescriptions = []
