@@ -34,7 +34,7 @@ async def on_message(message):
     if dice < 25:
         score = get_sentiment_score(message.content)
         if score < -0.4:
-            await message.channel.reply('venlafaxine, 225 mg 💊')
+            await message.reply('venlafaxine, 225 mg 💊')
     #except:
     #    print("Error interpreting user's message.")
 
