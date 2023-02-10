@@ -10,8 +10,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 load_dotenv()
-#TOKEN = os.getenv('DISCORD_TOKEN')
-TOKEN = 'MTA3MzI4MzMyMzE3MTk4MzQ0MQ.G1Mkiz.mdT0tpLC22zO1cKaYH1AUvaRctjfdnXnb6XQew'
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 
 client = discord.Client(intents=intents)
