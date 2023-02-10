@@ -8,12 +8,15 @@ from sentiment import get_sentiment_score
 
 intents = discord.Intents.default()
 intents.message_content = True
-
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-
-
 client = discord.Client(intents=intents)
+
+prescriptions = []
+with open('prescriptions.txt') as f:
+    for line in f:
+        line = line.strip()
+        prescriptions.append(line)
 
 @client.event
 async def on_ready():
@@ -34,7 +37,8 @@ async def on_message(message):
         if dice < 25:
             score = get_sentiment_score(message.content)
             if score < -0.4:
-                await message.reply('venlafaxine, 225 mg 💊')
+                p = random.choice(prescriptions)
+                await message.reply(p)
     except:
         print("Error interpreting user's message.")
 
