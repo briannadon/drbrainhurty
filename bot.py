@@ -1,6 +1,5 @@
 # bot.py
 import os
-
 import discord
 from dotenv import load_dotenv
 import random
@@ -12,8 +11,10 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 client = discord.Client(intents=intents)
 
+
+rx_path = os.path.dirname(os.path.realpath(__file__)) + "/prescriptions.txt"
 prescriptions = []
-with open('prescriptions.txt') as f:
+with open(rx_path) as f:
     for line in f:
         line = line.strip()
         prescriptions.append(line)
