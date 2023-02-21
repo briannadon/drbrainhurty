@@ -8,7 +8,7 @@ Type=simple
 User=brian_nadon
 RemainAfterExit=yes
 Restart=always
-Environment="DISCORD_TOKEN=MTA3MzI4MzMyMzE3MTk4MzQ0MQ.GtEQgh.Kf1Fn3vGe9SrgS_Se2u83p5CbWuOITnOOSJ-SM"
+Environment="DISCORD_TOKEN=here"
 
 [Install]
 WantedBy=default.target

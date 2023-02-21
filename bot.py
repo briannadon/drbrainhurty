@@ -37,14 +37,14 @@ async def on_message(message):
     if re.search(r'(W|w)hy.*\?',message.content):
         dice = random.randint(0,100)
         if dice < 5:
-            await message.reply("special message here :)")
+            await message.reply("because u gay!")
         return
 
     try:
         dice = random.randint(0,100)
         if dice < 25:
             score = get_sentiment_score(message.content)
-            if score < -0.4:
+            if score <= -0.5:
                 p = random.choice(prescriptions)
                 await message.reply(p)
         return
