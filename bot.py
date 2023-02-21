@@ -37,7 +37,7 @@ async def on_message(message):
     if re.search(r'(W|w)hy.*\?',message.content):
         dice = random.randint(0,100)
         if dice < 5:
-            await message.reply("because u gay!")
+            await message.reply("special message here :)")
         return
 
     try:
